@@ -19,12 +19,14 @@
             lv: JSON.parse('{"enable":true,"app_id":"7VGQEYfisYj098V2aqpXQVLj-gzGzoHsz","app_key":"jB9qBEF1sNjzNEyTTYrpB5Xb","icon":true}'),
             v: JSON.parse('{"enable":true,"appid":"7VGQEYfisYj098V2aqpXQVLj-gzGzoHsz","appkey":"jB9qBEF1sNjzNEyTTYrpB5Xb","notify":true,"verify":true,"placeholder":"能不能给我点个“赏”，谢谢您对我的支持，请留言","avatar":"identicon"}'),
             g: JSON.parse('{"enable":false,"lazy":false,"owner":"SailorChina","repo":"SS-PANEL-API","oauth":{"client_id":"c4b4dd887556a85d0376","client_secret":"ce8ac32661df06d0c99e1cd4f2cf6fb5e26a0754"},"perPage":10}'),
-            d: JSON.parse('{"app_id":null}')
+            d: JSON.parse('{"app_id":"b80d6d1b"}')
         };
     </script>
     <script type="text/javascript">
         window.lazyScripts=[];
     </script>
+    
+        <script type="text/javascript" src="/js/plugins/daovoice.js?v=1.4.1"></script>
     
 </head>
 
@@ -600,6 +602,13 @@
 
 
 
+
+    <script type="text/javascript">
+  daovoice('init', {
+    app_id: "b80d6d1b"
+  });
+  daovoice('update');
+</script>
 
 
     
