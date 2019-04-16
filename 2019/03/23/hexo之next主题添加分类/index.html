@@ -12,13 +12,15 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css">
     <link rel="stylesheet" href="/css/style.css?v=1.4.1">
     
+        <link rel="stylesheet" href="/css/third-party/gitment.css?v=1.4.1">
+    
     <script type="text/javascript">
         // Data Center
         var DC = {
             reward:	true,
             lv: JSON.parse('{"enable":true,"app_id":"7VGQEYfisYj098V2aqpXQVLj-gzGzoHsz","app_key":"jB9qBEF1sNjzNEyTTYrpB5Xb","icon":true}'),
             v: JSON.parse('{"enable":false,"appid":null,"appkey":null,"notify":true,"verify":true,"placeholder":"give me some sugers plz...","avatar":"wavatar"}'),
-            g: JSON.parse('{"enable":false,"lazy":true,"owner":"codefine","repo":"gitment","oauth":{"client_id":null,"client_secret":null},"perPage":10}'),
+            g: JSON.parse('{"enable":true,"lazy":true,"owner":"SailorChina","repo":"SS-PANEL-API","oauth":{"client_id":"c4b4dd887556a85d0376","client_secret":"ce8ac32661df06d0c99e1cd4f2cf6fb5e26a0754"},"perPage":10}'),
             d: JSON.parse('{"app_id":null}')
         };
     </script>
@@ -225,6 +227,16 @@
               
 
 
+<span class="post-comments-counter" id="/2019/03/23/hexo之next主题添加分类/">
+    <span class="post-meta-item-icon">
+        <i class="icon icon-comment-o"></i>
+    </span>
+    
+    <a href="/2019/03/23/hexo之next主题添加分类/#gitment-display-button" onclick="ShowGitment()">
+        <span class="post-comments-count gitment-comments-count" itemprop="commentsCount"></span>
+    </a>
+</span>
+
               
           </div>
           <div class="post-content" id="post-content" itemprop="postContent">
@@ -355,26 +367,27 @@
               
 
 
+      
+    <div onclick="ShowGitment()" id="gitment-display-button" style="display: block;">
+        <span>显示 Gitment 评论</span>
+    </div>
+    <div id="gitment" class="hide"></div>
+
+
+
           
       </div>
       
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="prev">
-      <a href="/2019/03/23/Markdown基本语法/" id="post-prev" class="post-nav-link">
+      <a href="/2019/03/23/hexo之next主题添加标签/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">Markdown基本语法</h4>
+        <h4 class="title">Hexo之Next主题添加标签</h4>
       </a>
     </div>
   
 
-  
-    <div class="next">
-      <a href="/2019/03/23/hexo之next主题添加标签/" id="post-next" class="post-nav-link">
-        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">Hexo之Next主题添加标签</h4>
-      </a>
-    </div>
   
 </nav>
 
@@ -559,6 +572,9 @@
 
 
     
+    
+        <script type="text/javascript" src="/js/plugins/gitmint.browser.js?v=1.4.1"></script>
+<script type="text/javascript" src="/js/plugins/gitment.js?v=1.4.1"></script>
     
 
 
