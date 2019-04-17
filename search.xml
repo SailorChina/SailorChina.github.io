@@ -313,56 +313,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[BBR+BBR魔改+Lotsever(锐速)一键脚本 for Centos/Debian/Ubuntu]]></title>
-      <url>/2019/03/23/BBR+BBR%E9%AD%94%E6%94%B9+Lotsever/</url>
-      <content type="html"><![CDATA[<h1 id="教程更新"><a href="#教程更新" class="headerlink" title="教程更新"></a>教程更新</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">【2018年12月24日】</span><br><span class="line">脚本新增BBRplus修正版，解决原版bbr在高丢包率下易失速以及bbr收敛慢的问题。尝试使其更好，减少排队和丢包。</span><br><span class="line">【2018年3月8日】</span><br><span class="line">脚本新增南琴浪的暴力魔改BBR，使速度更加暴力，实际效果因线路而定。</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<hr>
-<h1 id="脚本安装"><a href="#脚本安装" class="headerlink" title="脚本安装"></a>脚本安装</h1><p>支持系统：CentOS 6+、Debian 8+、Ubuntu 14+。</p>
-<p>注意：该脚本在Vultr各个系统均测试通过，如果期间有出现任何问题，可向原作者反映帮助改善。<br>运行以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#过程有2步，第1步安装相应的内核，第2步开启内核对应的加速</span><br><span class="line">wget -N --no-check-certificate https://github.com/SailorChina/serverspeeder.git &amp;&amp; bash serverspeeder.sh</span><br></pre></td></tr></table></figure>
-<figure class="image-box">
-                <img src="/2019/03/23/BBR+BBR魔改+Lotsever/1.png" alt title class>
-                <p></p>
-            </figure>
-<p>根据自己需求操作，重启后再使用./tcp.sh命令接着操作。</p>
-<p>如果在删除内核环节出现这样一张图</p>
-<figure class="image-box">
-                <img src="/2019/03/23/BBR+BBR魔改+Lotsever/2.png" alt title class>
-                <p></p>
-            </figure>
-<p>注意选择NO，然后根据提示重启系统。</p>
-<p>对于速度提成来说，锐速效果最好，魔改BBR和BBR修正版由于VPS网络不同测试效果不一，具体效果还是自己先测试一下再选择吧。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 加速 </category>
-            
-            <category> TCP加速 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> BBR </tag>
-            
-            <tag> BBR魔改 </tag>
-            
-            <tag> Lotsever(锐速) </tag>
-            
-            <tag> Centos </tag>
-            
-            <tag> Debian </tag>
-            
-            <tag> Ubuntu </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
       <title><![CDATA[Hexo之Next主题添加标签]]></title>
       <url>/2019/03/23/hexo%E4%B9%8Bnext%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%A0%87%E7%AD%BE/</url>
       <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="530" height="86" src="//music.163.com/outchain/player?type=2&id=1878854&auto=1&height=66"></iframe></p>
@@ -408,6 +358,56 @@
             <tag> Hexo </tag>
             
             <tag> Next主题 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[BBR+BBR魔改+Lotsever(锐速)一键脚本 for Centos/Debian/Ubuntu]]></title>
+      <url>/2019/03/23/BBR+BBR%E9%AD%94%E6%94%B9+Lotsever/</url>
+      <content type="html"><![CDATA[<h1 id="教程更新"><a href="#教程更新" class="headerlink" title="教程更新"></a>教程更新</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">【2018年12月24日】</span><br><span class="line">脚本新增BBRplus修正版，解决原版bbr在高丢包率下易失速以及bbr收敛慢的问题。尝试使其更好，减少排队和丢包。</span><br><span class="line">【2018年3月8日】</span><br><span class="line">脚本新增南琴浪的暴力魔改BBR，使速度更加暴力，实际效果因线路而定。</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<hr>
+<h1 id="脚本安装"><a href="#脚本安装" class="headerlink" title="脚本安装"></a>脚本安装</h1><p>支持系统：CentOS 6+、Debian 8+、Ubuntu 14+。</p>
+<p>注意：该脚本在Vultr各个系统均测试通过，如果期间有出现任何问题，可向原作者反映帮助改善。<br>运行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#过程有2步，第1步安装相应的内核，第2步开启内核对应的加速</span><br><span class="line">wget -N --no-check-certificate https://github.com/SailorChina/serverspeeder.git &amp;&amp; bash serverspeeder.sh</span><br></pre></td></tr></table></figure>
+<figure class="image-box">
+                <img src="/2019/03/23/BBR+BBR魔改+Lotsever/1.png" alt title class>
+                <p></p>
+            </figure>
+<p>根据自己需求操作，重启后再使用./tcp.sh命令接着操作。</p>
+<p>如果在删除内核环节出现这样一张图</p>
+<figure class="image-box">
+                <img src="/2019/03/23/BBR+BBR魔改+Lotsever/2.png" alt title class>
+                <p></p>
+            </figure>
+<p>注意选择NO，然后根据提示重启系统。</p>
+<p>对于速度提成来说，锐速效果最好，魔改BBR和BBR修正版由于VPS网络不同测试效果不一，具体效果还是自己先测试一下再选择吧。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 加速 </category>
+            
+            <category> TCP加速 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> BBR </tag>
+            
+            <tag> BBR魔改 </tag>
+            
+            <tag> Lotsever(锐速) </tag>
+            
+            <tag> Centos </tag>
+            
+            <tag> Debian </tag>
+            
+            <tag> Ubuntu </tag>
             
         </tags>
         
