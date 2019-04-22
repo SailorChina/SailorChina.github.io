@@ -14,7 +14,6 @@
 <li>博客内容可以轻松打包、转移、发布到其它平台；</li>
 <li>等等；</li>
 </ol>
-<a id="more"></a>
 <h1 id="1-1-准备工作"><a href="#1-1-准备工作" class="headerlink" title="1.1. 准备工作"></a>1.1. 准备工作</h1><hr>
 <p>在开始一切之前，你必须已经：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">有一个github账号，没有的话去注册一个；</span><br><span class="line">安装了node.js、npm，并了解相关基础知识；</span><br><span class="line">安装了git for windows（或者其它git客户端）</span><br></pre></td></tr></table></figure>
@@ -127,9 +126,9 @@
         
         <tags>
             
-            <tag> 搭建博客 </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> 搭建博客 </tag>
             
             <tag> github </tag>
             
@@ -140,10 +139,103 @@
     </entry>
     
     <entry>
+      <title><![CDATA[BBR+BBR魔改+Lotsever(锐速)一键脚本 for Centos/Debian/Ubuntu]]></title>
+      <url>/2019/03/23/BBR+BBR%E9%AD%94%E6%94%B9+Lotsever/</url>
+      <content type="html"><![CDATA[<h1 id="教程更新"><a href="#教程更新" class="headerlink" title="教程更新"></a>教程更新</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">【2018年12月24日】</span><br><span class="line">脚本新增BBRplus修正版，解决原版bbr在高丢包率下易失速以及bbr收敛慢的问题。尝试使其更好，减少排队和丢包。</span><br><span class="line">【2018年3月8日】</span><br><span class="line">脚本新增南琴浪的暴力魔改BBR，使速度更加暴力，实际效果因线路而定。</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="脚本安装"><a href="#脚本安装" class="headerlink" title="脚本安装"></a>脚本安装</h1><p>支持系统：CentOS 6+、Debian 8+、Ubuntu 14+。</p>
+<p>注意：该脚本在Vultr各个系统均测试通过，如果期间有出现任何问题，可向原作者反映帮助改善。<br>运行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#过程有2步，第1步安装相应的内核，第2步开启内核对应的加速</span><br><span class="line">wget -N --no-check-certificate https://github.com/SailorChina/serverspeeder.git &amp;&amp; bash serverspeeder.sh</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/03/23/BBR+BBR魔改+Lotsever/1.png" alt=" "></p>
+<p>根据自己需求操作，重启后再使用./tcp.sh命令接着操作。</p>
+<p>如果在删除内核环节出现这样一张图</p>
+<p><img src="/2019/03/23/BBR+BBR魔改+Lotsever/2.png" alt=" "></p>
+<p>注意选择NO，然后根据提示重启系统。</p>
+<p>对于速度提成来说，锐速效果最好，魔改BBR和BBR修正版由于VPS网络不同测试效果不一，具体效果还是自己先测试一下再选择吧。</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 加速 </category>
+            
+            <category> TCP加速 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> BBR </tag>
+            
+            <tag> BBR魔改 </tag>
+            
+            <tag> Lotsever(锐速) </tag>
+            
+            <tag> Centos </tag>
+            
+            <tag> Debian </tag>
+            
+            <tag> Ubuntu </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hexo之Next主题添加标签]]></title>
+      <url>/2019/03/23/hexo%E4%B9%8Bnext%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%A0%87%E7%AD%BE/</url>
+      <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="530" height="86" src="//music.163.com/outchain/player?type=2&id=1878854&auto=1&height=66"></iframe>
+
+<h1 id="1、创建“分类”选项"><a href="#1、创建“分类”选项" class="headerlink" title="1、创建“分类”选项"></a>1、创建“分类”选项</h1><h1 id="1-1-生成“分类”页并添加tpye属性"><a href="#1-1-生成“分类”页并添加tpye属性" class="headerlink" title="1.1 生成“分类”页并添加tpye属性"></a>1.1 生成“分类”页并添加tpye属性</h1><p>打开命令行，进入博客所在文件夹。执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure></p>
+<p>成功后会提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Created: ~/Documents/blog/source/categories/index.md</span><br></pre></td></tr></table></figure></p>
+<p>根据上面的路径，找到index.md这个文件，打开后默认内容是这样的：</p>
+<hr>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 文章分类</span><br><span class="line">date: 2017-05-27 13:47:40</span><br></pre></td></tr></table></figure>
+<hr>
+<p>添加type: “categories”到内容中，添加后是这样的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 文章分类</span><br><span class="line">date: 2017-05-27 13:47:40</span><br><span class="line">type: &quot;categories&quot;</span><br></pre></td></tr></table></figure></p>
+<hr>
+<p>保存并关闭文件。</p>
+<h1 id="1-2-给文章添加“categories”属性"><a href="#1-2-给文章添加“categories”属性" class="headerlink" title="1.2 给文章添加“categories”属性"></a>1.2 给文章添加“categories”属性</h1><p>打开需要添加分类的文章，为其添加categories属性。下方的categories: web前端表示添加这篇文章到“web前端”这个分类。注意：hexo一篇文章只能属于一个分类，也就是说如果在“- web前端”下方添加“-xxx”，hexo不会产生两个分类，而是把分类嵌套（即该文章属于 “- web前端”下的 “-xxx ”分类）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: jQuery对表单的操作及更多应用</span><br><span class="line">date: 2017-05-26 12:12:57</span><br><span class="line">categories: </span><br><span class="line">- web前端</span><br></pre></td></tr></table></figure>
+<p>至此，成功给文章添加分类，点击首页的“分类”可以看到该分类下的所有文章。当然，只有添加了categories: xxx的文章才会被收录到首页的“分类”中。</p>
+<hr>
+<h1 id="2、创建“标签”选项"><a href="#2、创建“标签”选项" class="headerlink" title="2、创建“标签”选项"></a>2、创建“标签”选项</h1><h1 id="2-1-生成“标签”页并添加tpye属性"><a href="#2-1-生成“标签”页并添加tpye属性" class="headerlink" title="2.1 生成“标签”页并添加tpye属性"></a>2.1 生成“标签”页并添加tpye属性</h1><p>打开命令行，进入博客所在文件夹。执行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
+<p>成功后会提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Created: ~/Documents/blog/source/tags/index.md</span><br></pre></td></tr></table></figure></p>
+<p>根据上面的路径，找到index.md这个文件，打开后默认内容是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">date: 2017-05-27 14:22:08</span><br></pre></td></tr></table></figure>
+<hr>
+<p>添加type: “tags”到内容中，添加后是这样的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 文章分类</span><br><span class="line">date: 2017-05-27 13:47:40</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure></p>
+<p>保存并关闭文件。</p>
+<h1 id="2-2-给文章添加“tags”属性"><a href="#2-2-给文章添加“tags”属性" class="headerlink" title="2.2 给文章添加“tags”属性"></a>2.2 给文章添加“tags”属性</h1><p>打开需要添加标签的文章，为其添加tags属性。下方的tags:下方的- jQuery - 表格</p>
+<ul>
+<li>表单验证就是这篇文章的标签了<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">title: jQuery对表单的操作及更多应用</span><br><span class="line">date: 2017-05-26 12:12:57</span><br><span class="line">categories: </span><br><span class="line">- web前端</span><br><span class="line">tags:</span><br><span class="line">- jQuery</span><br><span class="line">- 表格</span><br><span class="line">- 表单验证</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>至此，成功给文章添加分类，点击首页的“标签”可以看到该标签下的所有文章。当然，只有添加了tags: xxx的文章才会被收录到首页的“标签”中。<br>细心的朋友可能已经发现，这两个的设置几乎一模一样！是的，没错，思路都是一样的。所以我们可以打开scaffolds/post.md文件，在tages:上面加入categories:,保存后，之后执行hexo new 文章名命令生成的文件，页面里就有categories:项了。<br>scaffolds目录下，是新建页面的模板，执行新建命令时，是根据这里的模板页来完成的，所以可以在这里根据你自己的需求添加一些默认值。<br>教程结束，赶紧去设置吧！</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Next主题 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Next主题 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Markdown基本语法]]></title>
       <url>/2019/03/23/Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
       <content type="html"><![CDATA[<p>Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。<br>相比WYSIWYG编辑器<br>优点：<br>1、因为是纯文本，所以只要支持Markdown的地方都能获得一样的编辑效果，可以让作者摆脱排版的困扰，专心写作。<br>2、操作简单。比如:WYSIWYG编辑时标记个标题，先选中内容，再点击导航栏的标题按钮，选择几级标题。要三个步骤。而Markdown只需要在标题内容前加#即可<br>缺点：<br>1、需要记一些语法（当然，是很简单。五分钟学会）。<br>2、有些平台不支持Markdown编辑模式。<br>还好，简书是支持Markdown编辑模式的。</p>
-<a id="more"></a>
 <hr>
 <h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><p>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。</p>
 <p>注：标准语法一般在#后跟个空格再写文字，貌似简书不加空格也行。</p>
@@ -274,101 +366,6 @@
             <tag> 语法 </tag>
             
             <tag> 博客语法 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[BBR+BBR魔改+Lotsever(锐速)一键脚本 for Centos/Debian/Ubuntu]]></title>
-      <url>/2019/03/23/BBR+BBR%E9%AD%94%E6%94%B9+Lotsever/</url>
-      <content type="html"><![CDATA[<h1 id="教程更新"><a href="#教程更新" class="headerlink" title="教程更新"></a>教程更新</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">【2018年12月24日】</span><br><span class="line">脚本新增BBRplus修正版，解决原版bbr在高丢包率下易失速以及bbr收敛慢的问题。尝试使其更好，减少排队和丢包。</span><br><span class="line">【2018年3月8日】</span><br><span class="line">脚本新增南琴浪的暴力魔改BBR，使速度更加暴力，实际效果因线路而定。</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<hr>
-<h1 id="脚本安装"><a href="#脚本安装" class="headerlink" title="脚本安装"></a>脚本安装</h1><p>支持系统：CentOS 6+、Debian 8+、Ubuntu 14+。</p>
-<p>注意：该脚本在Vultr各个系统均测试通过，如果期间有出现任何问题，可向原作者反映帮助改善。<br>运行以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#过程有2步，第1步安装相应的内核，第2步开启内核对应的加速</span><br><span class="line">wget -N --no-check-certificate https://github.com/SailorChina/serverspeeder.git &amp;&amp; bash serverspeeder.sh</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/03/23/BBR+BBR魔改+Lotsever/1.png" alt=" "></p>
-<p>根据自己需求操作，重启后再使用./tcp.sh命令接着操作。</p>
-<p>如果在删除内核环节出现这样一张图</p>
-<p><img src="/2019/03/23/BBR+BBR魔改+Lotsever/2.png" alt=" "></p>
-<p>注意选择NO，然后根据提示重启系统。</p>
-<p>对于速度提成来说，锐速效果最好，魔改BBR和BBR修正版由于VPS网络不同测试效果不一，具体效果还是自己先测试一下再选择吧。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 加速 </category>
-            
-            <category> TCP加速 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> BBR </tag>
-            
-            <tag> BBR魔改 </tag>
-            
-            <tag> Lotsever(锐速) </tag>
-            
-            <tag> Centos </tag>
-            
-            <tag> Debian </tag>
-            
-            <tag> Ubuntu </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hexo之Next主题添加标签]]></title>
-      <url>/2019/03/23/hexo%E4%B9%8Bnext%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%A0%87%E7%AD%BE/</url>
-      <content type="html"><![CDATA[<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="530" height="86" src="//music.163.com/outchain/player?type=2&id=1878854&auto=1&height=66"></iframe></p>
-<h1 id="1、创建“分类”选项"><a href="#1、创建“分类”选项" class="headerlink" title="1、创建“分类”选项"></a>1、创建“分类”选项</h1><h1 id="1-1-生成“分类”页并添加tpye属性"><a href="#1-1-生成“分类”页并添加tpye属性" class="headerlink" title="1.1 生成“分类”页并添加tpye属性"></a>1.1 生成“分类”页并添加tpye属性</h1><p>打开命令行，进入博客所在文件夹。执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<p>成功后会提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Created: ~/Documents/blog/source/categories/index.md</span><br></pre></td></tr></table></figure></p>
-<p>根据上面的路径，找到index.md这个文件，打开后默认内容是这样的：</p>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 文章分类</span><br><span class="line">date: 2017-05-27 13:47:40</span><br></pre></td></tr></table></figure>
-<hr>
-<p>添加type: “categories”到内容中，添加后是这样的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 文章分类</span><br><span class="line">date: 2017-05-27 13:47:40</span><br><span class="line">type: &quot;categories&quot;</span><br></pre></td></tr></table></figure></p>
-<hr>
-<p>保存并关闭文件。</p>
-<h1 id="1-2-给文章添加“categories”属性"><a href="#1-2-给文章添加“categories”属性" class="headerlink" title="1.2 给文章添加“categories”属性"></a>1.2 给文章添加“categories”属性</h1><p>打开需要添加分类的文章，为其添加categories属性。下方的categories: web前端表示添加这篇文章到“web前端”这个分类。注意：hexo一篇文章只能属于一个分类，也就是说如果在“- web前端”下方添加“-xxx”，hexo不会产生两个分类，而是把分类嵌套（即该文章属于 “- web前端”下的 “-xxx ”分类）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: jQuery对表单的操作及更多应用</span><br><span class="line">date: 2017-05-26 12:12:57</span><br><span class="line">categories: </span><br><span class="line">- web前端</span><br></pre></td></tr></table></figure>
-<p>至此，成功给文章添加分类，点击首页的“分类”可以看到该分类下的所有文章。当然，只有添加了categories: xxx的文章才会被收录到首页的“分类”中。</p>
-<hr>
-<h1 id="2、创建“标签”选项"><a href="#2、创建“标签”选项" class="headerlink" title="2、创建“标签”选项"></a>2、创建“标签”选项</h1><h1 id="2-1-生成“标签”页并添加tpye属性"><a href="#2-1-生成“标签”页并添加tpye属性" class="headerlink" title="2.1 生成“标签”页并添加tpye属性"></a>2.1 生成“标签”页并添加tpye属性</h1><p>打开命令行，进入博客所在文件夹。执行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
-<p>成功后会提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Created: ~/Documents/blog/source/tags/index.md</span><br></pre></td></tr></table></figure></p>
-<p>根据上面的路径，找到index.md这个文件，打开后默认内容是这样的：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">title: 标签</span><br><span class="line">date: 2017-05-27 14:22:08</span><br></pre></td></tr></table></figure>
-<hr>
-<p>添加type: “tags”到内容中，添加后是这样的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">title: 文章分类</span><br><span class="line">date: 2017-05-27 13:47:40</span><br><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure></p>
-<p>保存并关闭文件。</p>
-<h1 id="2-2-给文章添加“tags”属性"><a href="#2-2-给文章添加“tags”属性" class="headerlink" title="2.2 给文章添加“tags”属性"></a>2.2 给文章添加“tags”属性</h1><p>打开需要添加标签的文章，为其添加tags属性。下方的tags:下方的- jQuery - 表格</p>
-<ul>
-<li>表单验证就是这篇文章的标签了<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">title: jQuery对表单的操作及更多应用</span><br><span class="line">date: 2017-05-26 12:12:57</span><br><span class="line">categories: </span><br><span class="line">- web前端</span><br><span class="line">tags:</span><br><span class="line">- jQuery</span><br><span class="line">- 表格</span><br><span class="line">- 表单验证</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>至此，成功给文章添加分类，点击首页的“标签”可以看到该标签下的所有文章。当然，只有添加了tags: xxx的文章才会被收录到首页的“标签”中。<br>细心的朋友可能已经发现，这两个的设置几乎一模一样！是的，没错，思路都是一样的。所以我们可以打开scaffolds/post.md文件，在tages:上面加入categories:,保存后，之后执行hexo new 文章名命令生成的文件，页面里就有categories:项了。<br>scaffolds目录下，是新建页面的模板，执行新建命令时，是根据这里的模板页来完成的，所以可以在这里根据你自己的需求添加一些默认值。<br>教程结束，赶紧去设置吧！</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Next主题 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-            <tag> Next主题 </tag>
             
         </tags>
         
