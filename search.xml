@@ -312,9 +312,9 @@
         
         <tags>
             
-            <tag> Hexo </tag>
-            
             <tag> 搭建博客 </tag>
+            
+            <tag> Hexo </tag>
             
             <tag> github </tag>
             
@@ -362,6 +362,34 @@
             <tag> Debian </tag>
             
             <tag> Ubuntu </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Linux系统一键评测]]></title>
+      <url>/2019/03/23/LINUX%E7%B3%BB%E7%BB%9F%E4%B8%80%E9%94%AE%E8%AF%84%E6%B5%8B/</url>
+      <content type="html"></content>
+      
+        <categories>
+            
+            <category> Linux系统 </category>
+            
+            <category> 软件 </category>
+            
+            <category> 一键评测 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> Linux系统 </tag>
+            
+            <tag> 软件 </tag>
+            
+            <tag> 一键评测 </tag>
             
         </tags>
         
@@ -501,34 +529,6 @@
             <tag> 语法 </tag>
             
             <tag> 博客语法 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Linux系统一键评测]]></title>
-      <url>/2019/03/23/LINUX%E7%B3%BB%E7%BB%9F%E4%B8%80%E9%94%AE%E8%AF%84%E6%B5%8B/</url>
-      <content type="html"></content>
-      
-        <categories>
-            
-            <category> Linux系统 </category>
-            
-            <category> 软件 </category>
-            
-            <category> 一键评测 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Linux系统 </tag>
-            
-            <tag> 软件 </tag>
-            
-            <tag> 一键评测 </tag>
             
         </tags>
         
